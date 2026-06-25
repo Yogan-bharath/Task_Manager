@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <div class="overlay">
+                <div class="small-container">
+                    <span>🗑️</span>
+                    <h3>Clear All Tasks?</h3>
+                    <p>This will permanently delete all tasks. This action cannot be undone.</p>
+                    <div>
+                        <button class="cancel">Cancel</button>
+                        <button class="red clear-all">Clear All</button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="top-head">
+            <div class="head-left">
+                <h1 class="title">Task <span class="manager">Manager</span></h1>
+                <p>Manage tasks efficiently with JavaScript DOM manipulation. <br> progress, filter by category, and learn how browsers <br> the web.</p>
+            </div>
+
+                <button class="theme-toggle">
+                    
+                </button>
+        </div>
+
+        <section class="container">
+
+            <div class="task-create">
+                
+                <div class="create">
+                    <i class="ri-pencil-fill"></i>
+                    <p>Create New Task</p>
+                </div>
+                
+                <form class="task-add">
+                    
+                    <div class="add-title">
+                        <label for="TASK-TITLE">TASK TITLE</label>
+                        <input type="text" id="TASK-TITLE" placeholder="Enter task title...">
+                    </div>
+                    
+                    <div class="category">
+                        <label for="CATEGORY">CATEGORY</label>
+                        <select  id="CATEGORY">
+                            <option value="Work">Work</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Study">Study</option>
+                            <option value="Health">Health</option>
+                            <option value="Shopping">Shopping</option>
+                        </select>
+                    </div>
+                    
+                    <button class="add-task">
+                        <h3>Add Task</h3>
+                    </button>
+                    
+                </form>
+            </div>
+
+            <div class="task-status total-tasks">
+                <div>
+                    <i class="ri-todo-line"></i>
+                    <span class="tasks-count">0</span>
+                    <p>Total Tasks</p>
+                </div>
+            </div>
+            <div class="task-status completed-tasks">
+                <div>
+                    <i class="ri-check-fill"></i>
+                    <span class="completed-tasks-count">0</span>
+                    <p>Total Tasks</p>
+                    <p class="count"><span>0</span>% done</p>
+                </div>
+            </div>
+            <div class="task-status  pending-tasks">
+                <div>
+                    <i class="ri-hourglass-fill"></i>
+                    <span class="pending-tasks-count">0</span>
+                    <p>Total Tasks</p>
+                    <p class="count"><span>0</span>% remaining</p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="search-filter">
+            <div class="search-head">
+                <i class="ri-search-line"></i>
+                <h3>Search & Filter</h3>
+            </div>
+            
+            <div class="search-section">
+                <div class="search">
+                    <i class="ri-search-line"></i>
+                    <input id="search" type="text" placeholder="Search tasks...">
+                </div>
+
+                <select name="" id="filter-cat">
+                    <option value="all">All Categories</option>
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="study">Study</option>
+                    <option value="health">Health</option>
+                    <option value="shopping">Shopping</option>
+                </select>
+
+                <button class="clear-all-button">
+                    <i class="ri-delete-bin-7-line"></i>
+                    <p>Clear All</p>
+                </button>
+            </div>
+        </section>
+
+        <section class="display-tasks">
+            <div class="display-tasks-head">
+                <div class="task-list">
+                <i class="ri-todo-fill"></i>
+                <h3>Task List</h3>
+                </div>
+
+                <div class="count-tasks">
+                    <span class="countTask">0</span>
+                    <p>tasks</p>
+                </div>
+            </div>
+
+            <div class="display-task-cards">
+                <div class="before-tasks-added">
+                    <span>📪</span>
+                    <p class="no-tasks">No tasks yet</p>
+                    <p class="last-child">Add your first task using the form above.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="render-pipeline">
+            <div class="render-title">
+                <h1>
+                    Browser <span>Rendering</span> Pipeline
+                </h1>
+                <p>Understanding how browsers transform raw HTML and CSS bytes into pixels on your screen — the complete step-by-step journey from network bytes to visual output.</p>
+
+                <div class="stages">
+                    <div class="orange"><span>•</span> Parsing Phase</div>
+                    <div class="blue"><span>•</span>  Tree Building</div>
+                    <div class="purple"><span>•</span>  Rendering Phase</div>
+                    <div class="green"><span>•</span>  Output Phase</div>
+                </div>
+            </div>
+
+            <div class="phase-cards-container">
+
+                <div class="phase-card border-orange">
+                        <p class="orange num">01</p>
+                        <div class="icon">🗒️</div>
+                        <div class="orange tag">PARSING PHASE</div>
+                        <h3>HTML Bytes</h3>
+                        <p>Raw bytes from the server are decoded into characters using the specified encoding (UTF-8).</p>    
+                </div>  
+                <div class="phase-card border-orange">
+                        <p class="orange num">02</p>
+                        <div class="icon">🔍</div>
+                        <div class="orange tag">PARSING PHASE</div>
+                        <h3>Tokenization</h3>
+                        <p>Characters converted into distinct tokens: start/end tags, attributes, and content nodes.</p>    
+                </div>  
+                <div class="phase-card border-orange">
+                        <p class="orange num">03</p>
+                        <div class="icon">🧩</div>
+                        <div class="orange tag">PARSING PHASE</div>
+                        <h3>Node Creation</h3>
+                        <p>Each token is converted into a node object with properties, event listeners, and relationships.</p>    
+                </div>  
+                <div class="phase-card border-blue">
+                        <p class="blue num">04</p>
+                        <div class="icon">🌳</div>
+                        <div class="blue tag">TREE BUILDING</div>
+                        <h3>DOM Tree</h3>
+                        <p>Nodes linked into a hierarchical tree structure representing the entire page document.</p>    
+                </div>  
+                <div class="phase-card border-blue">
+                        <p class="blue num">05</p>
+                        <div class="icon">🎨</div>
+                        <div class="blue tag">TREE BUILDING</div>
+                        <h3>CSS Parsing</h3>
+                        <p>CSS bytes tokenized, rules parsed with selectors and declarations extracted.</p>    
+                </div>  
+                <div class="phase-card border-blue">
+                        <p class="blue num">06</p>
+                        <div class="icon">🌿</div>
+                        <div class="blue tag">TREE BUILDING</div>
+                        <h3>CSSOM Tree</h3>
+                        <p>CSS rules assembled into a CSS Object Model — a tree of style rules with cascading applied.</p>    
+                </div>  
+                <div class="phase-card border-purple">
+                        <p class="purple num">07</p>
+                        <div class="icon">⚙️</div>
+                        <div class="purple tag">Rendering Phase</div>
+                        <h3>Render Tree</h3>
+                        <p>DOM + CSSOM merged. Only visible nodes included. Each node carries computed styles.</p>    
+                </div>  
+                <div class="phase-card border-purple">
+                        <p class="purple num">08</p>
+                        <div class="icon">📐</div>
+                        <div class="purple tag">Rendering Phase</div>
+                        <h3>Layout</h3>
+                        <p>Browser calculates exact position, size, and geometry of every render tree element.</p>    
+                </div>  
+                <div class="phase-card border-purple">
+                        <p class="purple num">09</p>
+                        <div class="icon">🖌️</div>
+                        <div class="purple tag">Rendering Phase</div>
+                        <h3>Paint</h3>
+                        <p>Fill in pixels for text, colors, images, borders, and shadows on individual layers.</p>    
+                </div>  
+                <div class="phase-card border-green">
+                        <p class="green num">10</p>
+                        <div class="icon">🔗</div>
+                        <div class="green tag">Output Phase</div>
+                        <h3>Compositing</h3>
+                        <p>Painted layers sent to GPU, composited in correct order using the stacking context.</p>    
+                </div>  
+                <div class="phase-card border-green">
+                        <p class="green num">11</p>
+                        <div class="icon">💻</div>
+                        <div class="green tag">Output Phase</div>
+                        <h3>Screen Output</h3>
+                        <p>Final rendered bitmap displayed on the user's screen at ~60fps for smooth interaction.</p>    
+                </div>  
+
+
+
+            </div>
+        </section>
+        </main> 
+    <script src="./script.js"></script>
+</body>
+</html>
