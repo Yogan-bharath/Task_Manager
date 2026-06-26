@@ -20,7 +20,7 @@ A responsive **Task Manager** web application built using **HTML, CSS, and Vanil
 - ⚡ Dynamic DOM updates without page refresh
 - 📱 Fully responsive design
 - 💾 Store tasks using Local Storage
-- 🌙 Dark Mode
+- 🌙  Theme Toggle
 - 🏷️ Task Categories
 - 🔍 Search Functionality
   
@@ -32,19 +32,6 @@ A responsive **Task Manager** web application built using **HTML, CSS, and Vanil
 <img width="1891" height="835" alt="image" src="https://github.com/user-attachments/assets/5eadf40a-384d-4cc0-8b5f-710dee7859ce" />
 <img width="1897" height="1078" alt="image" src="https://github.com/user-attachments/assets/59a5a259-5060-42ed-bf3c-49bba0d3d642" />
 
-
-```text
-📁 assets/
-   └── screenshot.png
-```
-
-Then use:
-
-```markdown
-![Task Manager Screenshot](assets/screenshot.png)
-```
-
----
 
 ## 🛠️ Tech Stack
 
